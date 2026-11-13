@@ -1,0 +1,21 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Настройки PyCharm
+.idea/
+*.iml
+
+# Логи и отчеты
+*.log
+reports/
+logs/
+
+# Переменные окружения
+.env

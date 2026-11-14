@@ -19,3 +19,5 @@ logs/
 
 # Переменные окружения
 .env
+.coverage
+htmlcov/

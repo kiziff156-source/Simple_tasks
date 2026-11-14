@@ -1,6 +1,6 @@
 import pytest
 
-from src.Test_simple.tasks import isValid, add_one, zero_to_end, sorted_nums
+from src.simple_tasks.tasks import isValid, add_one, zero_to_end, sorted_nums
 
 
 @pytest.mark.parametrize("input_brackets, exp_response", [
@@ -9,7 +9,7 @@ from src.Test_simple.tasks import isValid, add_one, zero_to_end, sorted_nums
     (")[]{}", False),
     ("([]{}", False)
 ])
-def test_task1(input_brackets, exp_response):
+def test_isValid(input_brackets, exp_response):
     assert exp_response == isValid(input_brackets)
 
 

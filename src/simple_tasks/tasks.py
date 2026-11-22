@@ -68,12 +68,12 @@ def reverse_word(s: str) -> str:
     return " ".join(words[::-1])
 
 
-def words(s: str) -> int:
+def words_count(s: str) -> int:
     words_number = len(s.split())
     return words_number
 
 
-def words_number2(s: str) -> int:
+def words_count2(s: str) -> int:
     if not s:  # пустая строка
         return 0
     count = 0
@@ -355,8 +355,10 @@ def comare_versions(s1: str, s2: str) -> str:
     else:
         return f"{v1} и {v2} одна и та же версия"
 
-def remove_all_duplicates(s:list[str]) -> list[str]:
+
+def remove_all_duplicates(s: list[str]) -> list[str]:
     return list(set(s))
+
 
 def remove_duplicates_loop(nums: list) -> list:
     seen = set()
@@ -367,7 +369,43 @@ def remove_duplicates_loop(nums: list) -> list:
             result.append(num)
     return result
 
-def compare_arrays(nums1: list[str], nums2: list[str]) -> str:
-    pass
-def compare_arrays2(nums1: list[str], nums2: list[str]) -> str:
-    pass
+
+def compare_arrays(nums1: list[str], nums2: list[str]) -> bool:
+    lenth1 = len(nums1)
+    lenth2 = len(nums2)
+    if lenth1 != lenth2:
+        return False
+    i = 0
+    while i < lenth1:
+        if nums1[i] != nums2[i]:
+            return False
+        i += 1
+    return True
+
+
+def compare_arrays2(nums1: list[str], nums2: list[str]) -> bool:
+   if nums1==nums2=='':
+        return True
+   if len(nums1) != len(nums2):
+       return False
+   result = (False for i in range(len(nums1)) if nums1[i] != nums2[i])
+   return result if result else True
+
+def compare_arrays3(nums1: list[str], nums2: list[str]) -> bool:
+    return nums1 == nums2
+
+def minimum (nums: list[int]) ->int:
+    return min(nums)
+
+def minimum_2 (nums: list[int]) ->int|None:
+    if nums:
+        length = len(nums)
+        i = 0
+        min = nums[0]
+        while i<length:
+            if nums[i] < min :
+                min = nums[i]
+            i+=1
+    else:
+        return None
+    return min
